@@ -143,5 +143,206 @@ distinct 대신 raw 쿼리로 대체하는 것이 현실적인 해결책입니�
       </td>
       <td></td>
     </tr>
+    <tr>
+      <td class="center" rowspan="2">7</td>
+      <td class="center" rowspan="2">2025-04-28</td>
+      <td class="center"><code>MySQL</code><br></td>
+      <td>
+        <code>View placeholder</code> <br>
+        <pre>DB에서 뷰를 생성시, 복합 참조 등의 경우에서 
+아직 생성되지 않은 테이블이나 뷰를 참조, 
+참조 무결성 오류 발생.
+
+이에 Forwad Engineering / mysqldump 등 
+스키마 구조 export시 뷰의 정의 무결성 유지차(정의 안전하게 포함?) 
+뷰와 동일 구조의 placeholder table 임시 생성, 이후 대체</pre>
+      </td>
+      <td></td>
+    </tr>
+<tr>
+      <td class="center"><code>Java</code><br></td>
+      <td>
+        <code>Core Principles of Java</code> <br>
+        <pre>생각나는대로
+<hr/>
+- 객채 지향
+  - 코드 재활용성 향상
+  - 역할/책임 분배에 따른 명확/직관적 제품 관리
+  - 유지보수 용이
+  - 라이브러리 방대화, 선순환에 따른 개발 효율성 증진
+  - 클래스 / 제네릭 / 상속 / 구현 / 인터페이스 / 캡슐화 / 모듈화
+- `JVM` / JRE / JDK  
+  - 핵심은 JVM? JDK는 development kit 이고 re무슨 에디션으로 기억 
+  - virtual machine이 가상환경에서 뭔가 돌리면서 뭔가 훌륭
+  - garbage collection이 JVM에 있었다했던거같고
+  - 멀티쓰레드도 얘가구현했었나
+<hr/>
+Perplexity
+<hr/><table>
+  <tbody>
+  <tr>
+  <td>특징</td><td>자바(Java)</td><td>과거 언어(C, C++, Pascal 등)</td>
+  </tr>
+  <tr>
+<td>플랫폼 독립성</td>
+<td>JVM 기반, Write Once Run Anywhere</td>
+<td>OS/플랫폼별 별도 컴파일 필요</td><tr>
+  <tr>
+<td>객체지향</td>
+<td>철저한 OOP, 클래스 기반</td>
+<td>C: 절차지향, C++: 혼합</td></tr>
+  <tr>
+<td>자동 메모리 관리</td>
+<td>자동(가비지 컬렉션)</td>
+<td>수동(malloc/free 등)</td></tr>
+  <tr>
+<td>내장 보안/네트워크</td>
+<td>내장 API 및 샌드박스, 안전성 강조</td>
+<td>외부 라이브러리, 보안 취약</td></tr>
+  <tr>
+<td>멀티스레딩</td>
+<td>언어/라이브러리 차원 지원</td>
+<td>플랫폼별 구현 필요</td></tr>
+  <tr>
+<tr><td>동적 로딩</td>
+<td>JVM이 지원</td>
+<td>정적 링크 기본, 동적 라이브러리 복잡</td></tr>
+  <tr>
+<td>문법/생산성</td>
+<td>안전성·생산성 중시, 현대적 기능 지속 도입</td>
+<td>포인터 등 위험 요소, 최신 기능 도입 느림</td></tr>
+  <tr>
+<td>성능</td>
+<td>JIT로 인터프리터 한계 극복</td>
+<td>네이티브 컴파일, 실행 속도 빠름</td></tr>
+  <tr>
+<td>라이브러리/생태계</td>
+<td>방대하고 강력</td>
+<td>제한적, 외부 의존</td>
+</tr>
+  </tbody>
+<tr>
+<td>객체지향 프로그래밍</td>
+<td>플랫폼 독립성[유연성?]</td>
+<td>강한 타입 검사</td>
+<td>견고함과 보안[샌드박스 환경?]</td>
+<td>간결하고 익숙한 문법</td>
+<td>자동 메모리 관리</td>
+<td>멀티스레딩 지원</td>
+<td>풍부한 표준 라이브러리</td>
+</tr>
+</table>
+- OOP(Object oriented programming)
+  - 객체Object-속성field-행위method 구성, 상호작용을 통해 솔루션 [인스턴스는?]
+  - Core Principles of OOP 캡슐화/상속/다형성/추상화
+  - C: 절차지향, 구조체 / C++: 다중상속, 포인터 / Java: 단일상속 제네릭
+- JIT(Just-In-Time) 컴파일
+  - 프로그램 실행 중 바이트코드를 기계어로 실시간 컴파일, 성능 최적화
+  - 인터프리터가 바이트코드를 실행하면서 자주 호출되는 코드를 식별합니다.
+  - JIT 컴파일러가 해당 코드를 네이티브 코드로 변환합니다.
+  - 이후에는 컴파일된 코드를 직접 실행하여 성능을 향상시킵니다.
+  - 간단하게는 자주쓰는코드의 효율적 실행이니까 이것도 나름의 객체화 아닌가
+  - Strong : 정적 컴파일 대비 실생 환경에 최적화(CPU Architecture), HotSpot
+  - Week : 초기 실행에 컴파일 지연, 메모리 사용량 증가.
+  - Ex : JVM
+- Structured Concurrency(구조화된 동시성)
+  - 동시성 작업의 수명 주기를 코드의 구문 구조에 맞춰 관리
+  - 부모 작업이 하위 작업 제어, 오류 전파/자원 정리 보장
+  - ! Scope 내 제한 : 모든 동시성 작업은 명시적 스코프에서 생성/종료
+  - Exception throw / try catch 구문들 + 그 구조들
+  - 하위 작업 실패 시 부모 작업으로 예외 전파
+  - 스코프 종료 시 파일 핸들, 네트워크 연결 등 안전 해제 보장
+  - 데드락 감소 : 작업 간 종속성을 코드 구조로 명시화
+    - 데드락 문제가 종속성 명시로 해결이 가능한 부분이구나?
+  - 스레드 누수 방지 : 스코프 외부 작업 제한으로 누수 방지
+  * 정해진 문?법을 활용함으로써 효율적 코딩과 효과적인 자원 관리, 이벤트 핸들링 가능
+- Enterprise Computing(기업?조직?비즈니스? 컴퓨팅)
+  - 대규모 조직 복잡 비즈니스 프로세스 지원용 컴퓨팅 인프라/소프트웨어 체계
+  - 주요 구성 요소
+    - ERP(Enterprise Resource Planning) : 부서별 데이터 통합관리
+    - CRM(Customer Relationship Management) : 고객별 데이터 분석/판매 자동화
+    - Cloud Computing : AWS / Azure [Saas] 등 확장성[통일성, 경량] 있는 인프라
+    - 빅데이터 분석 : Hadoop, Spark 활용 대량 데이터 처리
+  - 핵심 특징
+    - 고가용성 / 보안 / 통합
+    - 통합에서 RESTful API, Enterprise Service Bus 활용 시스템 연동
+- Distributed Systems(분산 시스템) : 여러 컴퓨터가 네트워크로 연결, 단일 시스템처럼 동작하는 컴퓨팅 환경.
+  - 주요 특징
+    - 확장성: 노드(서버 등) 추가를 통해 처리 용량 증설.
+    - 내결함성: 일부 노드 장애 시에도 시스템 전체는 운영.
+    - 병렬 처리: MapReduce 등으로 대용량 데이터 분산 처리.
+  - 아키텍처 유형
+    - 클라이언트-서버: 중앙 서버가 요청을 처리.
+    - P2P(Peer-to-Peer): 모든 노드가 동등 역할 수행.
+    - 마이크로서비스: 독립적인 서비스가 API로 통신.
+  - 기술 사례
+    - 분산 데이터베이스: Cassandra, MongoDB.
+    - 분산 파일 시스템: HDFS, Google File System.
+    - 메시징 시스템: Kafka, RabbitMQ.
+  - 발전 과제
+    - 일관성 유지: CAP 이론에 따라 Availability와 Consistency 간 균형 필요.
+    - 네트워크 지연: 분산 트랜잭션 관리가 복잡합니다.
+- Virtualize(가상화)
+<table>
+<tr>
+<td>구분</td>
+<td>전통적 가상화(VM)</td>
+<td>컨테이너 기반(Docker)</td>
+</tr>
+<tr>
+<td>추상화 계층</td>
+<td>하드웨어 계층(Hypervisor 사용)</td>
+<td>OS 커널 계층(호스트 커널 공유)</td>
+</tr>
+<tr>
+<td>실행 단위</td>
+<td>전체 OS + App</td>
+<td>App + 의존성 패키지</td>
+</tr>
+<tr>
+<td>성능</td>
+<td>오버헤드 ↑(Guest OS부팅 필요)</td>
+<td>오버헤드 ↓(ms단위 실행)</td>
+</tr>
+<tr>
+<td>리소스 사용</td>
+<td>각 VM이 독립적 메모리/CPU 할당</td>
+<td>호스트 리소스 공유 및 동적 할당</td>
+</tr>
+<tr>
+<td>이식성</td>
+<td>호환성 제한(VM 이미지 크기↑</td>
+<td>Docker 호환 환경 동일 실행</td>
+</tr>
+<tr>
+<td>부팅 시간</td>
+<td>1~5분</td>
+<td>~1초</td>
+</tr>
+<tr>
+<td>디스크/메모리</td>
+<td>GB / Guest OS 메모리</td>
+<td>MB / 프로세스 메모리</td>
+</tr>
+<tr>
+<td>호환성</td>
+<td>모든 OS 독립적 실행?</td>
+<td>Linux / Windows 컨테이너 분리</td>
+</tr>
+</table>
+</pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="center">N</td>
+      <td class="center">2025-00-00</td>
+      <td class="center"><code>CODE</code><br></td>
+      <td>
+        <code>Header</code> <br>
+        <pre>body</pre>
+      </td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
