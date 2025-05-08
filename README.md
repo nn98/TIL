@@ -335,6 +335,41 @@ Perplexity
       <td></td>
     </tr>
     <tr>
+      <td class="center">8</td>
+      <td class="center">2025-05-07</td>
+      <td class="center"><code>CS</code><br></td>
+      <td>
+        <code>Various</code> <br>
+        <pre>
+Endpoint 
+- URL. 마지막/끝단.
+- 요청과 응답의 상호작용 위치. 특정 기능/데이터와 1:1 대응
+- 메소드와 함께 사용, 메소드는 리퀘스트 패킷에 들어있나
+Mock
+- 가짜/임시 함수. 테스트 과정에서 외부 의존성 등 
+  실행의 복잡도나 지연시간을 증가시키는 함수를 가짜로 구현, 핵심 로직만 테스트 가능하도록
+Stub 
+- 임시로 대체한 미완성부
+- 미구현된 DB에 데이터 DML 실행 등
+CI, Continuous Integration
+- 지속적 코드||구조의 통합/테스트/검사/디버깅
+CD, Continuous Delivery/Deployment 
+- 지속적 테스트+배포준비/배포
+SI, System Integration
+- 시스템 통합. 각 구성품을 통합/연결해 하나의 큰 시스템으로 구축 및 운영
+DevOps, Development+Operations
+- 개발+운영 분야간의 협업, 통합 등 
+  전반적/전체적인 조직 문화, 프로세스, 도구, 역할 등을 통칭
+- 통합적 업무를 통해 사용자에게 빠르고 안정적인 소프트웨어 제공
+Jest
+- coverage report: stmts/branch/funcs/lines/uncovered line
+  [실행 가능 문장|명령] [코드 라인] 대부분 한줄에 명령문 한개니 비슷
+  우테코 코딩 컨벤션에서 강조한 이유가 따로있나
+</pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
       <td class="center">N</td>
       <td class="center">2025-00-00</td>
       <td class="center"><code>CODE</code><br></td>
