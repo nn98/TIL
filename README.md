@@ -443,7 +443,102 @@ IO
       </td>
       <td></td>
     </tr>
-    
+    <tr>
+      <td class="center"></td>
+      <td class="center">2025-05-26</td>
+      <td class="center"><code>React</code><br></td>
+      <td>
+        <code>React Structure</code> <br>
+        <pre>
+
+Flux Pattern
+=
+    Def)    페이스북(메타)에서 제안한 React 앱의 상태 관리 패턴.
+            단방향 데이터 흐름이 핵심
+            주요 구성요소 : Action > Dispatcher > Store > View(React Component)
+
+    Struc)  Action
+            사용자의 인터렉션(클릭 등)이나 네트워크 이벤트 등에서 발생.
+            {type: 'ADD_TODO', payload: ...} 형태의 객체
+            Dispatcher 
+            모든 액션을 받아서 스토어로 전달하는 중앙 허브
+            여러 스토어가 있을 경우 액션을 분배
+            Store
+            실제 어플리케이션의 상태(state) / 비즈니스 로직을 보관
+            액션을 받아서 상태를 변경
+            뷰에 변경 이벤트(emit change)를 알림
+            View
+            스토어의 상태를 구독(감지)하고, 상태가 변경되면 리렌더링
+            사용자의 입력을 액션으로 변환해 Dispatcher에 전달
+            useState(함수형 컴포넌트) / setState(클래스형 컴포넌트)
+            state는 컴포넌트 안에서만 관리되고, 값이 바뀌면 해당 컴포넌트가 리렌더링됨
+            
+    Feat)   Features / Characteristics
+            Store 직접 접근 금지
+            상태 변경은 반드시 Action > Dispatcher > Store 경로를 통해서만
+            단방향 데이터 흐름
+            상태가 변경되면 View 리렌더링, View에서 직접 Store를 수정 불가.
+
+Redux Library
+=
+    Def)    Flux의 아이디어를 더 단순화한 상태 관리 라이브러리
+            Store는 단 하나
+            Reducer라는 순수 함수로  상태 변화 정의
+    Struc)  Action      - { type : 'INCREMENT', payload : ... } 등의 인터렉션 등
+            Dispatch    - 액션을 스토어에 전달
+            Reducer     - 이전 상태와 액션을 받아서 새로운 상태를 반환하는 순수 함수
+            Store       - 상태를 보관, 구독자(View)에게 상태 변경 알림
+            View        - 상태를 구독(감지), 액션을 디스패치
+    Feat)   Store 직접 수정 불가
+            Reducer 통해서만 상태 변경
+            불변성 유지
+            상태 객체를 직접 수정하지 않고, 새로운 객체로 반환
+            단방향 데이터 흐름
+            Action > Dispatch > Reducer > Store > View
+
+Two-way Binding(양방향 바인딩)
+=
+    Def)    묶여있다 / 양방향으로
+            데이터(Model) / 화면(UI, View)이 상호 연결되어 있어
+            둘 중 하나가 변경되면 자동으로 나머지 하나가 동기화되는 데이터 처리 방식
+            코드/데이터의 값이 변경되면 UI/뷰에도 즉시 반영되고
+            뷰에서 사용자가 값을 바꾸면 모델에도 즉시 반영 
+            Ex) Vue.js / Angular / Svelte ...
+            React는 기본적으로 단방향 바인딩이지만
+            상태(state)/이벤트핸들러 조합시 유사하게 구현 가능
+
+One-way Binding(단방향 바인딩)
+=
+    Def)    상태 관리 컴포넌트에서 자식 컴포넌트에 props로 값을 넘기고,
+            변경 이벤트를 콜백으로 받아 상태를 갱신하는 식으로 구현
+
+</pre>
+<code>Reflect API</code> <br/>
+<pre>
+
+### 프로그래밍 언어에서 런타임이 객체/클래스/함수/속성 등
+### 구조와 정보를 동적으로 조회하거나 조작할 수 있게 해주는 기능
+JS(ES6) Reflect API
+=
+    Def)    ECMAScript 2015에서 도입된 내장 객체.
+            객체의 속성 조회/수정/함수 호출 등 다양한 메타프로그래밍 작업을 위한 정적 메소드 제공.
+            객체의 내부 동작을 직접 다루거나 Proxy와 함께 사용
+    Method) Reflect.get      (obj, prop)            : 속성값 접근
+            Reflect.set      (obj, prop)            : 속성값 설정
+            Reflect.has      (obj, prop)            : 속성값 존재유무 확인
+            Reflect.apply    (func, thisAlg, args)  : 속성값 함수 호출
+            Reflect.construct(constructor, args)    : 생성자 호출. ( == new )
+
+Java Reflect API
+=
+
+
+</pre>
+
+
+      </td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
