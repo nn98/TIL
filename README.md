@@ -557,14 +557,13 @@ current_max + 1이 만들 수 없는 최소값입니다.
 >그렇지 않으면 current_max에 현재 숫자를 더합니다.
 >
 #### 4. 모든 숫자 처리 후: 모든 숫자를 처리했다면 current_max + 1을 반환합니다.
+## Complexity
+<img src="https://velog.velcdn.com/images/nn98/post/2fe6eff6-eb53-4d5b-b3e5-7838e9373853/image.png"/>
+
 ## 해?석
 #### 판별 숫자/재료 숫자로 호칭, 판별 숫자는 1(0+1)부터 시작<br />재료 숫자가 판별 숫자보다 클 경우 그 판별 숫자가 최소 불가능 합<br />재료 숫자가 판별 숫자보다 작거나 같으면 재료 숫자 += 판별 숫자
 #### 재료 숫자를 하나씩 더한 수+1을 못만들면 그게 최소 불가능 합
-<img src="https://velog.velcdn.com/images/nn98/post/2fe6eff6-eb53-4d5b-b3e5-7838e9373853/image.png"/>
 </pre>
-
-![](https://velog.velcdn.com/images/nn98/post/2fe6eff6-eb53-4d5b-b3e5-7838e9373853/image.png)
-
       </td>
       <td></td>
     </tr>
