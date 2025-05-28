@@ -1,8 +1,9 @@
-# TIL
-* * *
 <style>
   .center { text-align: center; }
 </style>
+
+# TIL
+* * *
 <table>
   <thead>
     <tr>
@@ -228,6 +229,8 @@ Perplexity
 <td>플랫폼 독립성[유연성?]</td>
 <td>강한 타입 검사</td>
 <td>견고함과 보안[샌드박스 환경?]</td>
+</tr>
+<tr>
 <td>간결하고 익숙한 문법</td>
 <td>자동 메모리 관리</td>
 <td>멀티스레딩 지원</td>
