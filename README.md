@@ -1,7 +1,3 @@
-<style>
-  .center { text-align: center; }
-</style>
-
 # TIL
 * * *
 <table>
@@ -16,9 +12,9 @@
   </thead>
   <tbody>
     <tr>
-      <td class="center">1</td>
-      <td class="center">2025-04-08</td>
-      <td class="center"><code>JS</code></td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2025-04-08</td>
+      <td style="text-align: center"><code>JS</code></td>
       <td>
         <code>패키지 설치 및 관리</code><br>
         누더기 코딩의 대가<br>
@@ -49,9 +45,9 @@
       </td>
     </tr>
     <tr>
-      <td class="center">2</td>
-      <td class="center">2025-04-11</td>
-      <td class="center"><code>Alg</code></td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2025-04-11</td>
+      <td style="text-align: center"><code>Alg</code></td>
       <td>
         <code>그래프</code><br>
         BFS-큐에 depth 1 넣고 빌때까지<br>
@@ -61,9 +57,9 @@
       <td></td>
     </tr>
     <tr>
-      <td class="center">3</td>
-      <td class="center">2025-04-16</td>
-      <td class="center"><code>JS</code><br><code>Refactoring</code></td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">2025-04-16</td>
+      <td style="text-align: center"><code>JS</code><br><code>Refactoring</code></td>
       <td>
         <code>환경 변수 분리</code><br>
         환경 설정 값/환경 변수/시크릿 분리 - .env<br>
@@ -81,9 +77,9 @@
       <td></td>
     </tr>
     <tr>
-      <td class="center">4</td>
-      <td class="center">2025-04-17</td>
-      <td class="center"><code>Linux</code><br><code>JS</code></td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">2025-04-17</td>
+      <td style="text-align: center"><code>Linux</code><br><code>JS</code></td>
       <td>
         <code>방화벽</code><br>
         개발 편의를 위해 전개방 &gt; 방화벽 적용<br>
@@ -98,9 +94,9 @@
       <td></td>
     </tr>
     <tr>
-      <td class="center">5</td>
-      <td class="center">2025-04-18</td>
-      <td class="center"><code>JS</code><br><code>Refactoring</code></td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">2025-04-18</td>
+      <td style="text-align: center"><code>JS</code><br><code>Refactoring</code></td>
       <td>
         <code>Prisma ORM</code><br>
         기존 떙SQL → 프리즈마ORM<br>
@@ -115,9 +111,9 @@
       <td></td>
     </tr>
     <tr>
-      <td class="center">6</td>
-      <td class="center">2025-04-21</td>
-      <td class="center"><code>JS</code><br><code>Refactoring</code></td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">2025-04-21</td>
+      <td style="text-align: center"><code>JS</code><br><code>Refactoring</code></td>
       <td>
         <code>Prisma</code> 에서 DISTINCT<br>
         <pre>
@@ -145,9 +141,9 @@ distinct 대신 raw 쿼리로 대체하는 것이 현실적인 해결책입니�
       <td></td>
     </tr>
     <tr>
-      <td class="center" rowspan="2">7</td>
-      <td class="center" rowspan="2">2025-04-28</td>
-      <td class="center"><code>MySQL</code><br></td>
+      <td style="text-align: center" rowspan="2">7</td>
+      <td style="text-align: center" rowspan="2">2025-04-28</td>
+      <td style="text-align: center"><code>MySQL</code><br></td>
       <td>
         <code>View placeholder</code> <br>
         <pre>
@@ -163,7 +159,7 @@ DB에서 뷰를 생성시, 복합 참조 등의 경우에서
       <td></td>
     </tr>
 <tr>
-      <td class="center"><code>Java</code><br></td>
+      <td style="text-align: center"><code>Java</code><br></td>
       <td>
         <code>Core Principles of Java</code> <br>
         <pre>생각나는대로
@@ -340,9 +336,9 @@ Perplexity
       <td></td>
     </tr>
     <tr>
-      <td class="center">8</td>
-      <td class="center">2025-05-07</td>
-      <td class="center"><code>CS</code><br></td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">2025-05-07</td>
+      <td style="text-align: center"><code>CS</code><br></td>
       <td>
         <code>Various</code> <br>
         <pre>
@@ -384,9 +380,9 @@ Jest
       <td></td>
     </tr>
     <tr>
-      <td class="center">9</td>
-      <td class="center">2025-05-08</td>
-      <td class="center">
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">2025-05-08</td>
+      <td style="text-align: center">
 <code>CS</code><br>
 <code>Node.JS</code><br></td>
       <td>
@@ -437,9 +433,9 @@ IO
       <td></td>
     </tr>
     <tr>
-      <td class="center">10</td>
-      <td class="center">2025-05-09</td>
-      <td class="center"><code>C?S</code><br></td>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">2025-05-09</td>
+      <td style="text-align: center"><code>C?S</code><br></td>
       <td>
         <code>CallBack</code> <br>
         <pre>재귀문 > 반복문</pre>
@@ -447,9 +443,9 @@ IO
       <td></td>
     </tr>
     <tr>
-      <td class="center"></td>
-      <td class="center">2025-05-26</td>
-      <td class="center"><code>React</code><br></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center">2025-05-26</td>
+      <td style="text-align: center"><code>React</code><br></td>
       <td>
         <code>React Structure</code> <br>
         <pre>
@@ -541,9 +537,9 @@ Java Reflect API
       <td></td>
     </tr>
     <tr>
-      <td class="center">10</td>
-      <td class="center">2025-05-28</td>
-      <td class="center"><code>Algorithm</code><br></td>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">2025-05-28</td>
+      <td style="text-align: center"><code>Algorithm</code><br></td>
       <td>
         <code>Greedy, 최소 불가능 합 판별</code> <br>
         <pre>
