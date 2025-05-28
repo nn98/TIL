@@ -128,9 +128,12 @@
         return problems;
     }</pre>
       <code>Invalid value for argument `distinct`. Expected SolveScalarFieldEnum.</code><br>
-      <pre>Prisma의 일부 버전(특히 5.x 이상)에서는 distinct에 문자열 배열이 아닌 Enum만 허용하도록 타입이 강화된 사례가 있습니다.
-JavaScript(.js) 환경에서도 내부적으로 Enum을 요구할 수 있으며, 이 경우 문서와 실제 동작이 다를 수 있습니다.
-Prisma 클라이언트가 생성될 때 모델의 모든 필드 Enum(SolveScalarFieldEnum)을 자동 생성하는데,
+      <pre>Prisma의 일부 버전(특히 5.x 이상)에서는 distinct에 문자열 배열이 아닌 
+Enum만 허용하도록 타입이 강화된 사례가 있습니다.
+JavaScript(.js) 환경에서도 내부적으로 Enum을 요구할 수 있으며, 
+이 경우 문서와 실제 동작이 다를 수 있습니다.
+Prisma 클라이언트가 생성될 때 모델의 모든 필드 Enum(SolveScalarFieldEnum)을 
+자동 생성하는데,
 JS에서는 이 Enum을 직접 import해서 쓸 수 없습니다.
 공식적으로는 문자열 배열이 허용되어야 하지만,
 Prisma 버전/환경에 따라 오류가 발생할 수 있습니다.
@@ -557,8 +560,11 @@ current_max + 1이 만들 수 없는 최소값입니다.
 ## 해?석
 #### 판별 숫자/재료 숫자로 호칭, 판별 숫자는 1(0+1)부터 시작<br />재료 숫자가 판별 숫자보다 클 경우 그 판별 숫자가 최소 불가능 합<br />재료 숫자가 판별 숫자보다 작거나 같으면 재료 숫자 += 판별 숫자
 #### 재료 숫자를 하나씩 더한 수+1을 못만들면 그게 최소 불가능 합
-![](blob:https://www.perplexity.ai/36b8bac2-bcbd-4c16-a27f-59a1fe871d56)
+<img src="https://velog.velcdn.com/images/nn98/post/2fe6eff6-eb53-4d5b-b3e5-7838e9373853/image.png"/>
 </pre>
+
+![](https://velog.velcdn.com/images/nn98/post/2fe6eff6-eb53-4d5b-b3e5-7838e9373853/image.png)
+
       </td>
       <td></td>
     </tr>
