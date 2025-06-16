@@ -1,11 +1,10 @@
-https://claris.tistory.com/62
+https://claris.tistory.com/62  
 https://m.blog.naver.com/eunbi801/223699647178
 
 # 일반 면접
 
 <aside>
 🗣 1분 자기소개
-
 </aside>
 
 - 여유 있게 40초 정도 분량을 준비
