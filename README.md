@@ -551,7 +551,7 @@ Java Reflect API
 #### 1. 배열 정렬: 숫자를 오름차순으로 정렬합니다.
 #### 2. 현재까지 만들 수 있는 최대값 추적: current_max 변수를 0으로 초기화합니다.
 #### 3. 순회 및 검증:
-> 각 숫자를 순회하며, 현재 숫자가 current_max + 1보다 크면 
+> 각 숫자를 순회하며, 현재 숫자가 current_max + 1보다 크면
 current_max + 1이 만들 수 없는 최소값입니다.
 >
 >그렇지 않으면 current_max에 현재 숫자를 더합니다.
@@ -563,6 +563,20 @@ current_max + 1이 만들 수 없는 최소값입니다.
 ## 해?석
 #### 판별 숫자/재료 숫자로 호칭, 판별 숫자는 1(0+1)부터 시작<br />재료 숫자가 판별 숫자보다 클 경우 그 판별 숫자가 최소 불가능 합<br />재료 숫자가 판별 숫자보다 작거나 같으면 재료 숫자 += 판별 숫자
 #### 재료 숫자를 하나씩 더한 수+1을 못만들면 그게 최소 불가능 합
+</pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center">2025-07-02</td>
+      <td style="text-align: center"><code>CS</code><br><code>JS</code><br></td>
+      <td>
+        <code>Map, Object</code> <br>
+        <pre>
+
+## Object의 정렬
+#### ES6부터 Object의 key가 문자열일때만 순서가 보장된다
 </pre>
       </td>
       <td></td>
