@@ -154,8 +154,8 @@ DB에서 뷰를 생성시, 복합 참조 등의 경우에서
 아직 생성되지 않은 테이블이나 뷰를 참조, 
 참조 무결성 오류 발생.
 
-이에 Forwad Engineering / mysqldump 등 
-스키마 구조 export시 뷰의 정의 무결성 유지차(정의 안전하게 포함?) 
+이에 Forwad Engineering / mysqldump 등
+스키마 구조 export시 뷰의 정의 무결성 유지차(정의 안전하게 포함?)
 뷰와 동일 구조의 placeholder table 임시 생성, 이후 대체
 </pre>
       </td>
@@ -355,7 +355,7 @@ Mock
 -
     - 가짜/임시 함수. 테스트 과정에서 외부 의존성 등 
       실행의 복잡도나 지연시간을 증가시키는 함수를 가짜로 구현, 핵심 로직만 테스트 가능하도록
-Stub 
+Stub
 -
     - 임시로 대체한 미완성부
     - 미구현된 DB에 데이터 DML 실행 등
@@ -584,6 +584,92 @@ current_max + 1이 만들 수 없는 최소값입니다.
 1. 시스템 콜렉션 타입을 골고루 활용하기
 2. 디렉토리 반복 매칭 구현하기
       </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center">2025-07-07</td>
+      <td style="text-align: center"><code>CS</code><br><code>AI</code><br></td>
+      <td>
+        <code>MCP</code> <br>
+        <pre>
+
+# Model Context Protocol
+## 개념 정의
+### 인공지능(특히 대형 언어 모델LLM)과 외부 데이터 소스/도구를 표준 방식으로 연결하는 개방형 프로토콜
+## 아키텍처
+- ### Host : LLM App(IDE, ChatBot etc), 여러 클라이언트 관리, 사용자 인증/컨텍스트 집계
+- ### Client : Host 와 Server 사이 1:1 연결, 메시지 라우팅, 기능 협상
+- ### Server : 외부 데이터/툴 제공자, 실제 작업(검색, 파일 접근 등) 수행
+- ### Protocol : JSON-RPC 2.0 기반 메시지 포맷, 연결/협상/구독/오류 처리 등 정의
+### `메시지 흐름 및 구조`
+- 하단 JSON-RPC 2.0 포맷 참고
+## 주요 목적
+### AI가 다양한 데이터/파일/시스템/툴 과 쉽게 연동할 수 있도록 통합 인터페이스 제공
+## 적용 예시
+- ### AI 데스크톱 앱(Calude Desktop etc)에서 파일 시스템 접근
+- ### 개발환경(IDE)에서 코드/문서/데이터 연동
+- ### 기업 내부 지식베이스, CRM, 데이터페이스 등과 AI의 통합
+## 기술 특징 "AI의 USB-C"
+- ### JSON-RPC 2.0기반 메시지 전송
+- ### 서버-클라이언트 구조(MCP 서버, MCP 클라이언트, MCP 호스트)
+- ### LSP와 유사 구조
+## 주요 사례
+- ### Anthropic, OpenAI, Google DeepMind 등 주요 AI 기업 및 다양한 개발 도구들이 MCP 채택
+## 장점
+- ### 단일 표준(plug-and-play)로 다양한 데이터·툴 연동
+- ### 보안·접근 제어, 기능 협상, 오류 처리 등 내장
+- ### 각종 AI 앱, IDE, 챗봇 등에서 손쉽게 확장 가능
+
+</pre>
+<code>JSON-RPC 2.0</code> <br>
+<pre>
+
+## 네트워크를 통한 PRC를 위해 설계된 프로토콜
+#### 경량, 상태 비저장(stateless) 프로토콜, JSON 포맷 사용, HTTP, WebSocket 등 다양한 전송 계층에서 동작
+#### Request 구조
+- 클라이언트가 서버로 원격 함수 호출을 요청하는 메시지.
+    - jsonrpc : 프로토콜 버전(항상 2.0)
+    - method : 호출 함수명
+    - params : 함수 인자
+    - id : 요청 식별자(Response 매칭)
+#### Response 구조
+- 서버가 클라이언트의 요청에 대한 결과를 반환하는 메시지.
+    - jsonrpc : 상동
+    - result : 함수 실행 결과
+    - error : 함수 실행중 오류 발생 시 오류 객체
+    - id : 요청 식별자와 매칭해 동일한 값
+#### Notification(알림)
+- 식별자(id) 없이 응답 불필요한 단방향 메시지.
+
+- ### 명시된(Named) 매개변수(Parameters)
+    - "인자"를 객체로 전달 가능(가독성 / 확장성). 근데 원래 JSON도 가능했는데;
+- ### 표준화된 오류 처리
+    - 오류 코드 / 메시지 형식이 명확히 정의.
+- ### 일괄(Batch) 요청
+    - 복수 요청을 한 번에 전송
+
+## PRC
+### Remote Procedure Call
+원격 프로시저 호출.
+</pre>
+<code>LSP</code> <br>
+        <pre>
+
+## 코드 에디터(클라이언트) - 언어 서버(서버)간 통신을 표준화한 프로토콜
+- #### 코드 자동완성, 오류 진단, 정의 - 사용 위치 이동 등 언어 인텔리전스 기능 에디터에서 일관 제공
+- #### 언어 서버 - 각 프로그래밍 언어별로 문법분석/자동완성/오류진단 등 기능 제공 독립 프로세스
+- #### 클라이언트 - VSCode / Vim / Eclipse / IntelliJ etc.. LSP 지원 에디터 / IDE
+- #### LSP Message - JSON-RPC 2.0 Format으로 textDocument/[didOpen/didChange/definition] 다양한 메시지 송수신
+- #### 구조/흐름
+  - 에디터가 파일을 열거나 변경 - LSP 클라이언트가 서버에 알림 전송
+  - 서버는 코드 분석 - 진단 결과 / 자동완성 후보 / 정의 위치 등 정보 응답 
+  - 클라이언트는 응답 수신 후 에디터 UI에 반영
+### 장점
+- 언어 서버 하나로 다양한 에디터 지원 가능
+- 에디터 - 서버 간 표준화된 인터페이스로 확장성 우수
+</pre>
+      </td> 
       <td></td>
     </tr>
   </tbody>
