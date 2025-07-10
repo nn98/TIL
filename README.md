@@ -1,5 +1,7 @@
 # TIL
 * * *
+<details>
+<summary>2025 - 01 ~ 07</summary>
 <table>
   <thead>
     <tr>
@@ -662,9 +664,9 @@ current_max + 1이 만들 수 없는 최소값입니다.
 - #### 클라이언트 - VSCode / Vim / Eclipse / IntelliJ etc.. LSP 지원 에디터 / IDE
 - #### LSP Message - JSON-RPC 2.0 Format으로 textDocument/[didOpen/didChange/definition] 다양한 메시지 송수신
 - #### 구조/흐름
-  - 에디터가 파일을 열거나 변경 - LSP 클라이언트가 서버에 알림 전송
-  - 서버는 코드 분석 - 진단 결과 / 자동완성 후보 / 정의 위치 등 정보 응답 
-  - 클라이언트는 응답 수신 후 에디터 UI에 반영
+    - 에디터가 파일을 열거나 변경 - LSP 클라이언트가 서버에 알림 전송
+    - 서버는 코드 분석 - 진단 결과 / 자동완성 후보 / 정의 위치 등 정보 응답
+    - 클라이언트는 응답 수신 후 에디터 UI에 반영
 ### 장점
 - 언어 서버 하나로 다양한 에디터 지원 가능
 - 에디터 - 서버 간 표준화된 인터페이스로 확장성 우수
@@ -674,6 +676,138 @@ current_max + 1이 만들 수 없는 최소값입니다.
     </tr>
   </tbody>
 </table>
+</details>
+
+<h6> <details> <summary> 2025 - 07 ~ </summary>
+
+<table>
+<thead>
+<tr>
+<th>순번</th>
+<th>001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+날짜
+</th>
+<th>
+2025-07-10
+</th>
+</tr>
+
+<tr>
+<th>
+주제
+</th>
+<th>
+<h4> <code>Java Spring_Boot/_MVC</code> </h4>
+</th>
+</tr>
+
+<tr>
+<th>
+내용
+</th>
+<td>
+
+![image](https://github.com/user-attachments/assets/cbf7f0b3-7cc4-44e6-a0ec-51a82f0e3379)
+# Spring
+자바 기반 오픈 소스 프레임워크  
+객체의 생성/소멸/의조선 관리 등 복잡한 작업 대리  
+개발자는 비즈니스 로직에 집중  
+- **IoC (Inversion of Control, 제어의 역전)**
+  - 객체의 생성 및 생명주기 관리를 컨테이너(스프링)가 담당
+- **DI (Dependency Injection, 의존성 주입)**
+  - 객체 간 의존 관계를 외부에서 주입
+- **Bean (빈)**
+  - 스프링 컨테이너에 의해 관리되는 객체
+- **Bean Factory**
+  - 스프링에서 IoC를 담당하는 기본 컨테이너
+- **ApplicationContext**
+  - BeanFactory의 확장, 더 많은 부가 기능(메시지, 이벤트) 제공
+- **AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)**
+  - 공통 관심사 분리-코드 중복을 감축, 
+    유지보수 용이화 프로그래밍 패러다임
+
+# Spring Boot
+스프링을 더 쉽고 빠르게 사용할 수 있도록 보조하는 도구이자 프레임워크  
+- 자동 구성 (Auto-configuration)
+  - 프로젝트에 포함된 라이브러리 기반 필요 설정 자동 수행
+- 스타터 (Starter)
+  - 특정 기능 추가 용이하도록 묶인 의존성 패키지`spring-boot-starter-web`
+- 내장 서버 (Embedded Server)
+  - 톰캣, 제티, 언더토우 등 WAS 내장 / 서버 설치 없이 실행
+- 의존성 관리 (Dependency Management)
+  - Maven, Gradle 등 빌드 도구를 통해 필요 라이브러리 관리
+- 초기화 도구 (Spring Initializr)
+  - 웹 기반 프로젝트 생성 도구, 필요 의존성 선택-스프링부트 프로젝트 시작 용이
+
+# Spring MVC
+웹 애플리케이션 개발을 위한 모듈, MVC 패넡 지원
+- MVC Pattern
+  - Model: 비즈니스 로직 및 데이터 처리
+  - View: 사용자에게 보여지는 화면(HTML, JSON, etc..)
+  - Controller: 사용자의 요청을 받아 모델에서 처리, 뷰로 전달
+- DispatcherServlet
+  - 모든 요청을 받아 적절한 컨트롤러에 분배하는 프론트 컨트롤러 역할
+- HandlerMapping
+  - URL 등 요청 정보를 기반으로 어떤 컨트롤러가 처리할지 결정
+- HandlerAdapter
+  - 컨트롤러를 실제로 실행시켜주는 어댑터 역할
+- ViewResolver
+  - 논리적 뷰 이름을 실제 뷰(JSP, Thymeleaf)로 변환
+- ModelAndView
+  - 컨트롤러가 반환하는 객체, Model데이터 / View정보 포함
+- @Controller, @RestController, @ReqeustMapping
+  - 각종 어노테이션을 통해 컨트롤러 및 요청 매핑을 정의
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>순번</th>
+<th>001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+날짜
+</th>
+<th>
+2025-07-10
+</th>
+</tr>
+
+<tr>
+<th>
+주제
+</th>
+<td>
+<code></code>
+</td>
+</tr>
+
+<tr>
+<th>
+내용
+</th>
+<td>
+2025-07-10
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</details>
+</h6>
 
 * * *
 <h1> `舊`CS 정리 </h1>
