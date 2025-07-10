@@ -1,6 +1,6 @@
 # TIL
 * * *
-<h3>
+<h4>
 <details>
 <summary>2025 - 01 ~ 07</summary>
 <table>
@@ -678,11 +678,11 @@ current_max + 1이 만들 수 없는 최소값입니다.
   </tbody>
 </table>
 </details>
-</h3>
+</h4>
 
 # Half 
 
-<h3> <details> <summary> 2025 - 07 ~ </summary>
+<h4> <details> <summary> 2025 - 07 ~ </summary>
 
 <table>
 <thead>
@@ -811,7 +811,7 @@ current_max + 1이 만들 수 없는 최소값입니다.
 </table>
 
 </details>
-</h3>
+</h4>
 
 * * *
 <h1> `舊`CS 정리 </h1>
